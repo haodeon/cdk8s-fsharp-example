@@ -1,6 +1,7 @@
 ﻿open Constructs
 open Org.Cdk8s
 open K8s
+open Com.Pulumi
 
 // Define a function to create a Kubernetes Deployment
 let createDeployment (scope: Chart) (ns: string) (appLabel: string) =

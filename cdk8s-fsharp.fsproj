@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="imports\K8s\K8s.csproj" />
+    <ProjectReference Include="imports\Com.Pulumi\Com.Pulumi.csproj" />
   </ItemGroup>
 
 </Project>
