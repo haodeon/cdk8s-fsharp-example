@@ -1,0 +1,75 @@
+using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace K8s
+{
+    /// <summary>DaemonSetList is a collection of daemon sets.</summary>
+    /// <remarks>
+    /// <strong>Schema</strong>: io.k8s.api.apps.v1.DaemonSetList
+    /// </remarks>
+    [JsiiInterface(nativeType: typeof(IKubeDaemonSetListProps), fullyQualifiedName: "k8s.KubeDaemonSetListProps")]
+    public interface IKubeDaemonSetListProps
+    {
+        /// <summary>A list of daemon sets.</summary>
+        /// <remarks>
+        /// <strong>Schema</strong>: io.k8s.api.apps.v1.DaemonSetList#items
+        /// </remarks>
+        [JsiiProperty(name: "items", typeJson: "{\"collection\":{\"elementtype\":{\"fqn\":\"k8s.KubeDaemonSetProps\"},\"kind\":\"array\"}}")]
+        K8s.IKubeDaemonSetProps[] Items
+        {
+            get;
+        }
+
+        /// <summary>Standard list metadata.</summary>
+        /// <remarks>
+        /// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+        ///
+        /// <strong>Schema</strong>: io.k8s.api.apps.v1.DaemonSetList#metadata
+        /// </remarks>
+        [JsiiProperty(name: "metadata", typeJson: "{\"fqn\":\"k8s.ListMeta\"}", isOptional: true)]
+        [Amazon.JSII.Runtime.Deputy.JsiiOptional]
+        K8s.IListMeta? Metadata
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        /// <summary>DaemonSetList is a collection of daemon sets.</summary>
+        /// <remarks>
+        /// <strong>Schema</strong>: io.k8s.api.apps.v1.DaemonSetList
+        /// </remarks>
+        [JsiiTypeProxy(nativeType: typeof(IKubeDaemonSetListProps), fullyQualifiedName: "k8s.KubeDaemonSetListProps")]
+        internal sealed class _Proxy : DeputyBase, K8s.IKubeDaemonSetListProps
+        {
+            private _Proxy(ByRefValue reference): base(reference)
+            {
+            }
+
+            /// <summary>A list of daemon sets.</summary>
+            /// <remarks>
+            /// <strong>Schema</strong>: io.k8s.api.apps.v1.DaemonSetList#items
+            /// </remarks>
+            [JsiiProperty(name: "items", typeJson: "{\"collection\":{\"elementtype\":{\"fqn\":\"k8s.KubeDaemonSetProps\"},\"kind\":\"array\"}}")]
+            public K8s.IKubeDaemonSetProps[] Items
+            {
+                get => GetInstanceProperty<K8s.IKubeDaemonSetProps[]>()!;
+            }
+
+            /// <summary>Standard list metadata.</summary>
+            /// <remarks>
+            /// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+            ///
+            /// <strong>Schema</strong>: io.k8s.api.apps.v1.DaemonSetList#metadata
+            /// </remarks>
+            [JsiiOptional]
+            [JsiiProperty(name: "metadata", typeJson: "{\"fqn\":\"k8s.ListMeta\"}", isOptional: true)]
+            public K8s.IListMeta? Metadata
+            {
+                get => GetInstanceProperty<K8s.IListMeta?>();
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>cdk8s_fsharp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Constructs" Version="10.3.0" />
+    <PackageReference Include="Org.Cdk8s" Version="2.68.86" />
+    <PackageReference Include="Org.Cdk8s.Plus30" Version="2.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="imports\K8s\K8s.csproj" />
+  </ItemGroup>
+
+</Project>
